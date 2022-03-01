@@ -5,8 +5,8 @@ Puppet::Functions.create_function(:"puppet_run_offset::run_offset") do
   dispatch :uptime_range do
     param 'Numeric', :a # second range (seconds), typically 1800 seconds. Meaning will trigger in the 1st half of each hour
     param 'Numeric', :b # how often to repeat (hours), typically 24 hours
-    param 'Numeric', :c # uptime seconds, put $fact['uptime_seconds']
-    param 'Numeric', :d # uptime hours, put $fact['uptime_hours']
+    param 'Numeric', :c # uptime seconds, put $facts['uptime_seconds']
+    param 'Numeric', :d # uptime hours, put $facts['uptime_hours']
     return_type 'Boolean'
   end
   # the function below is called by puppet and and must match
